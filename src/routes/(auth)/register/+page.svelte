@@ -1,21 +1,23 @@
-<script lang="ts">
+<script>
   import { Label } from "$lib/components/ui/label";
   import { Input } from "$lib/components/ui/input";
   import { Button } from "$lib/components/ui/button";
-  import { LogIn } from "lucide-svelte";
   import { Checkbox } from "$lib/components/ui/checkbox";
-  import { CardTitle, CardDescription, CardHeader, CardContent } from "$lib/components/ui/card";
+  import { Milestone, TriangleAlert } from "lucide-svelte";
+  import { CardHeader, CardTitle, CardDescription, CardContent } from "$lib/components/ui/card";
 
   let checked = $state(false);
+  let password = $state("");
+  let confirmPassword = $state("");
 </script>
 
 <svelte:head>
-  <title>Login</title>
+  <title>Register</title>
 </svelte:head>
 
 <CardHeader class="space-y-1">
-  <CardTitle class="text-2xl font-bold text-gradient">Log In</CardTitle>
-  <CardDescription>Enter your email and password to log in.</CardDescription>
+  <CardTitle class="text-2xl font-bold text-gradient">Register</CardTitle>
+  <CardDescription>Enter your email and password to register.</CardDescription>
 </CardHeader>
 
 <CardContent>
@@ -33,6 +35,19 @@
         placeholder={checked ? "password" : "*&%#@!-;"}
         type={checked ? "text" : "password"}
         spellcheck="false"
+        bind:value={password}
+      />
+    </div>
+
+    <div class="space-y-2">
+      <Label for="confirmPassword">Confirm password</Label>
+      <Input
+        name="confirmPassword"
+        id="confirm-password"
+        placeholder={checked ? "password" : "*&%#@!-;"}
+        type={checked ? "text" : "password"}
+        spellcheck="false"
+        bind:value={confirmPassword}
       />
     </div>
 
@@ -49,15 +64,15 @@
       </div>
     </div>
 
-    <Button class="w-full bg-gradient" type="submit">
-      <LogIn class="mr-2 w-5" />
-      Log in
+    <Button class="w-full bg-gradient" type="submit" disabled={password !== confirmPassword}>
+      <Milestone class="mr-2 w-5" />
+      Register
     </Button>
 
     <div class="mt-5">
-      <Label>Don't have an account?</Label>
-      <a href="/register" class="text-sm cursor-pointer">
-        <span class="text-gradient">Register</span>
+      <Label>Already have an account?</Label>
+      <a href="/login" class="text-sm text-primary cursor-pointer">
+        <span class="text-gradient">Log In</span>
       </a>!
     </div>
   </form>
