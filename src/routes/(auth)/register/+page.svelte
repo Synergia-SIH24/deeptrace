@@ -23,6 +23,11 @@
 <CardContent>
   <form method="POST" class="space-y-4">
     <div class="space-y-2">
+      <Label for="name" class="text-gradient">Name</Label>
+      <Input name="name" id="name" placeholder="John/Jane Doe" type="text" spellcheck="false" />
+    </div>
+
+    <div class="space-y-2">
       <Label for="email" class="text-gradient">Email</Label>
       <Input name="email" id="email" placeholder="abc@abc.com" type="email" spellcheck="false" />
     </div>
@@ -72,8 +77,8 @@
     <div class="mt-5 text-gray-500">
       <Label class="font-normal">Already have an account?</Label>
       <a href="/login" class="text-sm text-primary cursor-pointer">
-        <span class="text-gradient">Log In</span>
-      </a>!
+        <span class="text-gradient">Log In!</span>
+      </a>
     </div>
   </form>
 </CardContent>

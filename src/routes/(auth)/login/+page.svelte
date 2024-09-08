@@ -1,10 +1,20 @@
 <script lang="ts">
+  import { loginSchema } from "./login.schema";
+  import { superForm } from "sveltekit-superforms";
+  import { zodClient } from "sveltekit-superforms/adapters";
   import { Label } from "$lib/components/ui/label";
   import { Input } from "$lib/components/ui/input";
+  import * as Alert from "$lib/components/ui/alert";
   import { Button } from "$lib/components/ui/button";
-  import { LogIn } from "lucide-svelte";
+  import { LogIn, TriangleAlert } from "lucide-svelte";
   import { Checkbox } from "$lib/components/ui/checkbox";
   import { CardTitle, CardDescription, CardHeader, CardContent } from "$lib/components/ui/card";
+
+  const { data } = $props();
+
+  const { form, errors, constraints, enhance } = superForm(data.form, {
+    validators: zodClient(loginSchema)
+  });
 
   let checked = $state(false);
 </script>
@@ -19,10 +29,21 @@
 </CardHeader>
 
 <CardContent>
-  <form method="POST" class="space-y-4">
+  <form method="POST" class="space-y-4" use:enhance>
     <div class="space-y-2">
       <Label for="email" class="text-gradient">Email</Label>
-      <Input name="email" id="email" placeholder="abc@abc.com" type="email" spellcheck="false" />
+      <Input
+        name="email"
+        id="email"
+        placeholder="abc@abc.com"
+        type="email"
+        aria-invalid={$errors.email ? "true" : undefined}
+        aria-describedby={$errors.email ? "email-error email-desc" : "email-desc"}
+        aria-required={$constraints.email?.required ? "true" : undefined}
+        spellcheck="false"
+        bind:value={$form.email}
+        {...$constraints.email}
+      />
     </div>
 
     <div class="space-y-2">
@@ -32,7 +53,12 @@
         id="password"
         placeholder={checked ? "password" : "*&%#@!-;"}
         type={checked ? "text" : "password"}
+        aria-invalid={$errors.password ? "true" : undefined}
+        aria-describedby={$errors.password ? "password-error password-desc" : "password-desc"}
+        aria-required={$constraints.password?.required ? "true" : undefined}
         spellcheck="false"
+        bind:value={$form.password}
+        {...$constraints.password}
       />
     </div>
 
@@ -47,6 +73,13 @@
           Show password?
         </Label>
       </div>
+
+      {#if $errors.email}
+        <Alert.Root variant="destructive" class="bg-red-100">
+          <TriangleAlert class="h-4 w-4" />
+          <Alert.Title>{$errors.email}</Alert.Title>
+        </Alert.Root>
+      {/if}
     </div>
 
     <Button class="w-full bg-gradient" type="submit">

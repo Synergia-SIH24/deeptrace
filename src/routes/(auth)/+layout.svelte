@@ -4,7 +4,7 @@
   const { children } = $props();
 </script>
 
-<Card class="mx-auto max-w-sm max-h-sm mt-20">
+<Card class="mx-auto max-w-sm max-h-sm mt-16">
   {@render children()}
 </Card>
 
