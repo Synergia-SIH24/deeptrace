@@ -4,7 +4,7 @@
   const { children } = $props();
 </script>
 
-<Card class="mx-auto max-w-sm max-h-sm mt-10 p-3">
+<Card class="mx-auto max-w-sm max-h-sm mt-[3.6rem] p-3 card-backdrop">
   {@render children()}
 </Card>
 
@@ -48,5 +48,33 @@
     background-clip: text;
     text-fill-color: transparent;
     display: inline-block;
+  }
+
+  :global(.card-backdrop) {
+    position: relative;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      height: 101.5%;
+      width: 102%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: red;
+      z-index: -1;
+      border-radius: 10px;
+      background-image: conic-gradient(
+        #575efb 0%,
+        #2b4b7d 25%,
+        #98509d 50%,
+        #9700f2 75%,
+        #575efb 100%
+      );
+    }
+    &::before {
+      filter: blur(1.5rem);
+      opacity: 0.5;
+    }
   }
 </style>
