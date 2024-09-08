@@ -1,4 +1,4 @@
 module.exports = {
   // eslint-disable-next-line @typescript-eslint/no-require-imports
-  plugins: [require('tailwindcss/nesting'), require('tailwindcss'), require('autoprefixer')]
+  plugins: [require("tailwindcss/nesting"), require("tailwindcss"), require("autoprefixer")]
 };
