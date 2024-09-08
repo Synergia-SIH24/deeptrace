@@ -35,6 +35,7 @@
       <Input
         name="email"
         id="email"
+        class="card-blur input-blur"
         placeholder="abc@abc.com"
         type="email"
         aria-invalid={$errors.email ? "true" : undefined}
@@ -51,6 +52,7 @@
       <Input
         name="password"
         id="password"
+        class="card-blur input-blur"
         placeholder={checked ? "password" : "*&%#@!-;"}
         type={checked ? "text" : "password"}
         aria-invalid={$errors.password ? "true" : undefined}
@@ -75,7 +77,7 @@
       </div>
 
       {#if $errors.email}
-        <Alert.Root variant="destructive" class="bg-red-100">
+        <Alert.Root variant="destructive" class="card-blur bg-red-100">
           <TriangleAlert class="h-4 w-4" />
           <Alert.Title>{$errors.email}</Alert.Title>
         </Alert.Root>

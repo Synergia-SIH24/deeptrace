@@ -24,12 +24,26 @@
   <form method="POST" class="space-y-4">
     <div class="space-y-2">
       <Label for="name" class="text-gradient">Name</Label>
-      <Input name="name" id="name" placeholder="John/Jane Doe" type="text" spellcheck="false" />
+      <Input
+        name="name"
+        id="name"
+        class="card-blur input-blur"
+        placeholder="John/Jane Doe"
+        type="text"
+        spellcheck="false"
+      />
     </div>
 
     <div class="space-y-2">
       <Label for="email" class="text-gradient">Email</Label>
-      <Input name="email" id="email" placeholder="abc@abc.com" type="email" spellcheck="false" />
+      <Input
+        name="email"
+        id="email"
+        class="card-blur input-blur"
+        placeholder="abc@abc.com"
+        type="email"
+        spellcheck="false"
+      />
     </div>
 
     <div class="space-y-2">
@@ -37,6 +51,7 @@
       <Input
         name="password"
         id="password"
+        class="card-blur input-blur"
         placeholder={checked ? "password" : "*&%#@!-;"}
         type={checked ? "text" : "password"}
         spellcheck="false"
@@ -49,6 +64,7 @@
       <Input
         name="confirmPassword"
         id="confirm-password"
+        class="card-blur input-blur"
         placeholder={checked ? "password" : "*&%#@!-;"}
         type={checked ? "text" : "password"}
         spellcheck="false"
