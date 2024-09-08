@@ -24,7 +24,7 @@
   :global(body),
   :global(.bg-gradient),
   :global(.text-gradient) {
-    background: linear-gradient(45deg, #d1a7d6, #f5c2e7, #eff1f5, #f5e0dc, #d9a2a3);
+    background: radial-gradient(circle, #833ab4, #e90014, #fcb045);
     background-size: 300% 300%;
     animation: gradientAnimation 10s ease infinite;
   }

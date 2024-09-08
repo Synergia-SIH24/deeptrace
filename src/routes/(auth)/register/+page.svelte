@@ -3,7 +3,7 @@
   import { Input } from "$lib/components/ui/input";
   import { Button } from "$lib/components/ui/button";
   import { Checkbox } from "$lib/components/ui/checkbox";
-  import { Milestone, TriangleAlert } from "lucide-svelte";
+  import { Milestone } from "lucide-svelte";
   import { CardHeader, CardTitle, CardDescription, CardContent } from "$lib/components/ui/card";
 
   let checked = $state(false);
@@ -23,12 +23,12 @@
 <CardContent>
   <form method="POST" class="space-y-4">
     <div class="space-y-2">
-      <Label for="email">Email</Label>
+      <Label for="email" class="text-gradient">Email</Label>
       <Input name="email" id="email" placeholder="abc@abc.com" type="email" spellcheck="false" />
     </div>
 
     <div class="space-y-2">
-      <Label for="password">Password</Label>
+      <Label for="password" class="text-gradient">Password</Label>
       <Input
         name="password"
         id="password"
@@ -40,7 +40,7 @@
     </div>
 
     <div class="space-y-2">
-      <Label for="confirmPassword">Confirm password</Label>
+      <Label for="confirmPassword" class="text-gradient">Confirm password</Label>
       <Input
         name="confirmPassword"
         id="confirm-password"
@@ -57,7 +57,7 @@
         <Label
           id="terms-label"
           for="terms"
-          class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          class="text-sm text-gray-500 font-normal leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
         >
           Show password?
         </Label>
@@ -69,8 +69,8 @@
       Register
     </Button>
 
-    <div class="mt-5">
-      <Label>Already have an account?</Label>
+    <div class="mt-5 text-gray-500">
+      <Label class="font-normal">Already have an account?</Label>
       <a href="/login" class="text-sm text-primary cursor-pointer">
         <span class="text-gradient">Log In</span>
       </a>!

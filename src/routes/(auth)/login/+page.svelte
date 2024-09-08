@@ -21,12 +21,12 @@
 <CardContent>
   <form method="POST" class="space-y-4">
     <div class="space-y-2">
-      <Label for="email">Email</Label>
+      <Label for="email" class="text-gradient">Email</Label>
       <Input name="email" id="email" placeholder="abc@abc.com" type="email" spellcheck="false" />
     </div>
 
     <div class="space-y-2">
-      <Label for="password">Password</Label>
+      <Label for="password" class="text-gradient">Password</Label>
       <Input
         name="password"
         id="password"
@@ -42,7 +42,7 @@
         <Label
           id="terms-label"
           for="terms"
-          class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          class="text-sm font-normal leading-none peer-disabled:cursor-not-allowed text-gray-500 peer-disabled:opacity-70"
         >
           Show password?
         </Label>
@@ -54,11 +54,11 @@
       Log in
     </Button>
 
-    <div class="mt-5">
-      <Label>Don't have an account?</Label>
+    <div class="mt-5 text-gray-500">
+      <Label class="font-normal">Don't have an account?</Label>
       <a href="/register" class="text-sm cursor-pointer">
-        <span class="text-gradient">Register</span>
-      </a>!
+        <span class="text-gradient">Register!</span>
+      </a>
     </div>
   </form>
 </CardContent>
