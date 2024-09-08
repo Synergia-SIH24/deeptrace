@@ -8,7 +8,8 @@
   import { Button } from "$lib/components/ui/button";
   import { LogIn, TriangleAlert } from "lucide-svelte";
   import { Checkbox } from "$lib/components/ui/checkbox";
-  import { CardTitle, CardDescription, CardHeader, CardContent } from "$lib/components/ui/card";
+  import { CardTitle, CardHeader, CardContent } from "$lib/components/ui/card";
+  import Logo from "$lib/icons/Logo.svelte";
 
   const { data } = $props();
 
@@ -24,8 +25,9 @@
 </svelte:head>
 
 <CardHeader class="space-y-1">
-  <CardTitle class="text-2xl font-bold text-gradient">Log In</CardTitle>
-  <CardDescription>Enter your email and password to log in.</CardDescription>
+  <CardTitle class="text-2xl font-bold text-gradient">
+    <Logo />
+  </CardTitle>
 </CardHeader>
 
 <CardContent>
@@ -35,7 +37,6 @@
       <Input
         name="email"
         id="email"
-        class="card-blur input-blur"
         placeholder="abc@abc.com"
         type="email"
         aria-invalid={$errors.email ? "true" : undefined}
@@ -52,7 +53,6 @@
       <Input
         name="password"
         id="password"
-        class="card-blur input-blur"
         placeholder={checked ? "password" : "*&%#@!-;"}
         type={checked ? "text" : "password"}
         aria-invalid={$errors.password ? "true" : undefined}
@@ -77,7 +77,7 @@
       </div>
 
       {#if $errors.email}
-        <Alert.Root variant="destructive" class="card-blur bg-red-100">
+        <Alert.Root variant="destructive">
           <TriangleAlert class="h-4 w-4" />
           <Alert.Title>{$errors.email}</Alert.Title>
         </Alert.Root>

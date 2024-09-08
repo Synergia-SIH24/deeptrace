@@ -4,7 +4,8 @@
   import { Button } from "$lib/components/ui/button";
   import { Checkbox } from "$lib/components/ui/checkbox";
   import { Milestone } from "lucide-svelte";
-  import { CardHeader, CardTitle, CardDescription, CardContent } from "$lib/components/ui/card";
+  import { CardHeader, CardTitle, CardContent } from "$lib/components/ui/card";
+  import Logo from "$lib/icons/Logo.svelte";
 
   let checked = $state(false);
   let password = $state("");
@@ -16,34 +17,16 @@
 </svelte:head>
 
 <CardHeader class="space-y-1">
-  <CardTitle class="text-2xl font-bold text-gradient">Register</CardTitle>
-  <CardDescription>Enter your email and password to register.</CardDescription>
+  <CardTitle class="text-2xl font-bold text-gradient">
+    <Logo />
+  </CardTitle>
 </CardHeader>
 
 <CardContent>
   <form method="POST" class="space-y-4">
     <div class="space-y-2">
-      <Label for="name" class="text-gradient">Name</Label>
-      <Input
-        name="name"
-        id="name"
-        class="card-blur input-blur"
-        placeholder="John/Jane Doe"
-        type="text"
-        spellcheck="false"
-      />
-    </div>
-
-    <div class="space-y-2">
       <Label for="email" class="text-gradient">Email</Label>
-      <Input
-        name="email"
-        id="email"
-        class="card-blur input-blur"
-        placeholder="abc@abc.com"
-        type="email"
-        spellcheck="false"
-      />
+      <Input name="email" id="email" placeholder="abc@abc.com" type="email" spellcheck="false" />
     </div>
 
     <div class="space-y-2">
@@ -51,7 +34,6 @@
       <Input
         name="password"
         id="password"
-        class="card-blur input-blur"
         placeholder={checked ? "password" : "*&%#@!-;"}
         type={checked ? "text" : "password"}
         spellcheck="false"
@@ -64,7 +46,6 @@
       <Input
         name="confirmPassword"
         id="confirm-password"
-        class="card-blur input-blur"
         placeholder={checked ? "password" : "*&%#@!-;"}
         type={checked ? "text" : "password"}
         spellcheck="false"

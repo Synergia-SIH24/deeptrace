@@ -4,7 +4,7 @@
   const { children } = $props();
 </script>
 
-<Card class="mx-auto max-w-sm max-h-sm mt-10 card-blur p-3">
+<Card class="mx-auto max-w-sm max-h-sm mt-10 p-3">
   {@render children()}
 </Card>
 
@@ -27,7 +27,6 @@
     }
   }
 
-  :global(body),
   :global(.bg-gradient),
   :global(.text-gradient) {
     background: radial-gradient(circle, #575efb, #2b4b7d, #5f5195, #98509d, #9700f2);
@@ -49,17 +48,5 @@
     background-clip: text;
     text-fill-color: transparent;
     display: inline-block;
-  }
-
-  :global(.card-blur) {
-    background: rgba(255, 255, 255, 0.6);
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0, 0.2);
-    backdrop-filter: blur(10px) saturate(100%);
-    -webkit-backdrop-filter: blur(10px) saturate(100%);
-  }
-
-  :global(.input-blur) {
-    background: rgba(255, 255, 255, 0.4);
   }
 </style>
