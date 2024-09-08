@@ -14,7 +14,7 @@
 </svelte:head>
 
 <CardHeader class="space-y-1">
-  <CardTitle class="text-2xl font-bold">Log in</CardTitle>
+  <CardTitle class="text-2xl font-bold text-gradient">Log In</CardTitle>
   <CardDescription>Enter your email and password to log in.</CardDescription>
 </CardHeader>
 
@@ -49,14 +49,16 @@
       </div>
     </div>
 
-    <Button class="w-full" type="submit">
+    <Button class="w-full bg-gradient" type="submit">
       <LogIn class="mr-2 w-5" />
       Log in
     </Button>
 
     <div class="mt-5">
       <Label>Don't have an account?</Label>
-      <a href="/register" class="text-sm text-primary cursor-pointer">Register</a>!
+      <a href="/register" class="text-sm cursor-pointer">
+        <span class="text-gradient">Register</span>
+      </a>!
     </div>
   </form>
 </CardContent>
