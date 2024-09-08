@@ -86,15 +86,15 @@
   }
 }
 
-:global(body),
-:global(.bg-gradient),
-:global(.text-gradient) {
+body,
+.bg-gradient,
+.text-gradient {
   background: radial-gradient(circle, #575efb, #2b4b7d, #5f5195, #98509d, #9700f2);
   background-size: 300% 300%;
   animation: gradientAnimation 10s ease infinite;
 }
 
-:global(body) {
+body {
   margin: 0;
   height: 100vh;
   &::-webkit-scrollbar {
@@ -102,7 +102,7 @@
   }
 }
 
-:global(.text-gradient) {
+.text-gradient {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
