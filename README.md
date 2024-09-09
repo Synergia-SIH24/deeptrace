@@ -1,5 +1,8 @@
 ## DeepTrace
 
+![image](https://github.com/user-attachments/assets/630abf85-043e-4def-b82b-bff47dda22a7)
+
+
 SIH24 solution to problem statement no. 1683 by Synergia.
 
 ## Build
