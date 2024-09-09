@@ -1,6 +1,7 @@
 ## deeptrace
 
-![vdx8w9db](https://github.com/user-attachments/assets/5aa6640f-b680-4f2f-89ee-f449527dc4be)
+![vdx8w9db](https://github.com/user-attachments/assets/dc253f6b-f5a8-441d-8b51-bd1745d54cc0)
+
 
 
 
