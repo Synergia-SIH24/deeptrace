@@ -4,7 +4,6 @@
 
 
 
-SIH24 solution to problem statement no. 1683 by Synergia.
 
 ## Introduction
 
