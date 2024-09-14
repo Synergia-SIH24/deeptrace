@@ -1,6 +1,6 @@
 {
-  "name": "face-swap-deepfake-video-detection",
-  "description": "Face Swap Deepfake Video Detection",
+  "name": "deeptrace",
+  "description": "Face Swap Deepfake Video Detection. SIH24.",
   "version": "0.1.0",
   "type": "module",
   "scripts": {
