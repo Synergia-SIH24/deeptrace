@@ -1,6 +1,6 @@
 import { db } from "$lib/server/db";
 import { auth } from "$lib/server/auth";
-import { Argon2id } from "oslo/password";
+import { verify } from "argon2";
 import { fail, redirect } from "@sveltejs/kit";
 import { zod } from "sveltekit-superforms/adapters";
 import { loginSchema } from "./login.schema";
@@ -34,7 +34,7 @@ export const actions = {
         return fail(400, { form });
       }
 
-      const isValidPassword = await new Argon2id().verify(user.password, form.data.password);
+      const isValidPassword = await verify(form.data.password, user.password);
 
       if (!isValidPassword) {
         form.errors.email = ["Invalid username or password."];

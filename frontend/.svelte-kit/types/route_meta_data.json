@@ -1,8 +1,12 @@
 {
-  "/(auth)": [],
-  "/(app)": [],
-  "/": [],
-  "/(auth)/login": ["src/routes/(auth)/login/+page.server.ts"],
-  "/(auth)/logout": ["src/routes/(auth)/logout/+server.ts"],
-  "/(auth)/register": []
+	"/(auth)": [],
+	"/(app)": [],
+	"/": [],
+	"/(auth)/login": [
+		"src/routes/(auth)/login/+page.server.ts"
+	],
+	"/(auth)/logout": [
+		"src/routes/(auth)/logout/+server.ts"
+	],
+	"/(auth)/register": []
 }
