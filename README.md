@@ -1,9 +1,5 @@
 
-![vdx8w9db](https://github.com/user-attachments/assets/dc253f6b-f5a8-441d-8b51-bd1745d54cc0)
-
-
-
-
+![logo](/frontend/static/logo.webp)
 
 ## Introduction
 
