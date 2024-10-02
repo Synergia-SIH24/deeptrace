@@ -1,1 +1,0 @@
-{"version":3,"file":"_page.svelte-DdiZaReM.js","sources":["../../../.svelte-kit/adapter-node/entries/pages/(app)/_page.svelte.js"],"sourcesContent":["function _page($$payload) {\n  $$payload.out += `<!---->DASHBOARD`;\n}\nexport {\n  _page as default\n};\n"],"names":[],"mappings":"AAAA,SAAS,KAAK,CAAC,SAAS,EAAE;AAC1B,EAAE,SAAS,CAAC,GAAG,IAAI,CAAC,gBAAgB,CAAC,CAAC;AACtC;;;;"}
