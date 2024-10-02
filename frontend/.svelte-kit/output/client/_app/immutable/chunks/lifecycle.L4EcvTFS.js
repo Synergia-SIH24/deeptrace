@@ -1,1 +1,0 @@
-import{Q as r,N as e,D as c,R as a,O as i,S as l,K as u,T as _}from"./runtime.BjDaq2n6.js";function m(){const s=c,n=s.l.u;n&&(n.b.length&&r(()=>{f(s),a(n.b)}),e(()=>{const o=i(()=>n.m.map(l));return()=>{for(const t of o)typeof t=="function"&&t()}}),n.a.length&&e(()=>{f(s),a(n.a)}))}function f(s){if(s.l.s)for(const n of s.l.s)u(n);_(s.s)}export{m as i};
